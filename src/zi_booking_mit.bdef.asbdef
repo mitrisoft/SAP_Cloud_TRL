@@ -1,0 +1,15 @@
+unmanaged implementation in class z_i_booking_mit unique;
+
+define behavior for ZI_Booking_MIT alias Booking
+//late numbering
+lock master
+etag master LastChangedAt
+
+{
+  field ( readonly ) Booking;
+  field (mandatory) CustomerName, NumberOfPassengers, Cost, CurrencyCode, DateOfTravel;
+
+  create;
+  update;
+  delete;
+}
